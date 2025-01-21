@@ -1,0 +1,44 @@
+/* .blockquote {
+    text-align: center;
+    color: #8e0203;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 15px;
+    font-weight: 700;
+    line-height: 1;
+} */
+
+img {
+    background-size: cover;
+}
+
+.container-fluid {
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align:center;
+    color: #8e0203;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800;
+    margin-top: 10px;
+    line-height: 1.7;
+    background-color: skyblue;
+}
+
+.bg-primary {
+    background-color: #8e0203 !important;
+}
+
+.btn-primary {
+    background-color: #8e0203 !important;
+    border-color: #8e0203 !important;
+}
+
+.table-primary {
+    background-color: #8e0203 !important;
+}
+
+.table {
+    background-color: #8e0203 !important;
+}
+
+
+

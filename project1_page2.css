@@ -1,0 +1,24 @@
+.container-fluid {
+    background-color: brown;
+    color: aliceblue;
+}
+img{
+    background-color: aliceblue;
+}
+
+.navbar-brand{
+    color: aliceblue;
+    font-weight: 500;
+
+}
+.viewport {
+    text-align: center;
+    line-height: 0.8;
+    font-weight: 400;
+}
+.card-body {
+    height: 1500px;
+    width: 650px;
+    box-shadow: 2px;
+    margin-left: 30%; 
+}
