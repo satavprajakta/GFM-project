@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTrack - Student Register</title>
+    <link rel="stylesheet" href="student_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #7d2222;
+    color: white;
+    padding: 10px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+#jspm {
+    width: 36px;
+    height: 36px;
+    padding-left: 15px;
+}
+
+.user-manual {
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.login-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    text-align: center;
+    font-size: 20px;
+}
+
+.input {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.input label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.input input, .input textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input button {
+    margin-top: 15px;
+    background-color: #ad3d3d;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.input button:hover {
+    background-color: #771414;
+}
+
+.table-container {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #7d2222;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+</style>
+<body>
+    <div class="navbar">
+        <img src="jspm_logo.jpg" alt="Logo" id="jspm">
+        <div class="logo">EduTrack</div>
+        <div class="user-manual"> 
+            <span><i class="fa-solid fa-user"></i> <b>User Manual</b></span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="login-box">
+            <div class="card-header">
+                <span><i class="fa-solid fa-user"></i><b> Student Register :</b></span>
+                <hr>
+            </div>
+            <form method="post" action="/submit">
+                <div class="input">
+                   
+                        <label name="username"><b>USERNAME:<%=user.username%></b></label>
+                    
+                    
+
+                   <h4 name="student_name">Name of Student:</h4> 
+                    <input type="text" value="<%=user.studentName%>" name="student_name" placeholder="Full Name" required>
+
+                    <label>RBT No.</label>
+                    <input type="text" value="<%=user.rbtno%>" name="rbt_no" placeholder="RBT No." required>
+
+                    <label>Absent Date:</label>
+                    <input type="date" name="absent_date" value="<%= new Date().toISOString().split('T')[0] %>" required>
+
+
+                    <label>Reason for Absence:</label>
+                    <textarea name="reason" placeholder="Why absent?" required ></textarea>
+
+                    <label>Upload Permission Letter, Medical/Event Certificate (if applicable):</label>
+                    <input type="text" name="file" accept="image/*,.pdf">
+
+                    <button type="submit">Submit</button>
+                    
+                </div>
+            </form>
+
+            <form method="post" action="/submit">
+                <div class="input">
+                   
+                        
+                    
+                    
+
+                 
+                    <input type="text" value="<%=user.studentName%>" name="student_name" placeholder="Full Name" required>
+
+                  
+                    <input type="text" value="<%=user.rbtno%>" name="rbt_no" placeholder="RBT No." required >
+
+                 
+
+                
+                    <button type="submit">see history</button>
+                    
+                </div>
+            </form>
+            
+        </div>
+    </div>
+   
+    <footer>
+        <p>Copyright © 2025 EduTrack. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Absences</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; padding: 0; background-color: #f4f4f4; }
+        h2 { text-align: center; color: #333; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #7d2222; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        img { max-width: 100px; max-height: 100px; }
+    </style>
+</head>
+<body>
+
+    <h2>All Submitted Absences</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>RBT No.</th>
+            <th>Absent Date</th>
+            <th>Reason</th>
+            <th>File</th>
+        s
+        </tr>
+
+        <% results.forEach(result => { %>
+            <tr>
+                <td><%= result.student_name %></td>
+                <td><%= result.rbt_no %></td>
+                <td><%= result.absent_date %></td>
+                <td><%= result.reason %></td>
+                <td>
+                    <% if (result.file) { %>
+                       <img src="/uploads/<%= result.file %>" alt="img">
+                    <% } else { %>
+                        No file uploaded
+                    <% } %>
+                </td>
+              
+            </tr>
+        <% }) %>
+        
+    </table>
+
+</body>
+</html>

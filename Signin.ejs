@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTrack - Login</title>
+    <link rel="stylesheet" href="login_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<style>body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgb(135, 33, 33);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+#jspm {
+    width: 36px;
+    height: 36px;
+    padding-left: 15px;
+    align-items: flex-start;
+}
+
+
+.user-manual {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 15px;
+    background-color: #d32f2f; /* A deep red shade */
+    color: #ffffff; /* White text for contrast */
+    border-radius: 6px; /* Slightly rounded corners */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    margin-left: auto; /* Pushes it to the right */
+}
+
+/* Hover effect */
+.user-manual:hover {
+    background-color: #0ac000; /* Darker red on hover */
+    transform: scale(1.05); /* Slight scale-up effect */
+}
+
+.fa-solid{
+    letter-spacing: 8px;
+}
+
+.card-header {
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    padding-top: 70px;
+}
+
+.login-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+}
+
+.login-box label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+.login-box select, .login-box input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #b23d39;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #9c2420;
+}
+.input{
+    text-align: start;
+}
+a {
+    padding: 5px;
+}
+
+.forgot-password {
+    display: block;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgb(26, 26, 46,.2);
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+
+}</style>
+<body>
+    <div class="navbar">
+        <img src="jspm_logo.jpg" alt="Logo" id="jspm">
+        <div class="logo">EduTrack</div>
+        <div class="user-manual">
+            <i class="fa-solid fa-user"></i> <a href="http://localhost:8080/manual">User Manual</a>
+        </div>
+    </div>
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="card-header">
+                <span><i class="fa-solid fa-arrow-right-to-bracket"></i><b> sign in :</b></span>
+                <hr>
+            </div>
+
+         
+            <form action="/signup" method="POST">
+                <label>Educational Year :</label>
+                <select name="educationalYear">
+                    <option>Please Select</option>
+                    <option selected>2024-2025</option>
+                    <option>2023-2024</option>
+                    <option>2022-2023</option>
+                    <option>2021-2022</option>
+                </select>
+
+                <label>User Roles :</label>
+                <select name="userRole" id="userRole">
+                    <option>Please Select</option>
+                    <option value="student">Student</option>
+                 
+                </select>
+
+                <div id="studentFields">
+                    <label>Student Name :</label><input type="text" name="studentName" placeholder="Full Name">
+                    <label>RBT No. :</label><input type="text" name="rbtno" placeholder="RBT No.">
+                    <label>Email ID :</label><input type="email" name="email" placeholder="Email ID">
+                    <label>Phone No. :</label><input type="text" name="phoneNo" placeholder="Phone No.">
+                    <label>Parent No. :</label><input type="text" name="parentNo" placeholder="Parent Phone No.">
+                    <label>Parent Email ID :</label><input type="email" name="parentEmail" placeholder="Parent Email ID">
+                    <label>Department :</label><input type="text" name="department" placeholder="Department">
+                    <label>Passout Batch :</label><input type="text" name="passoutBatch" placeholder="Passout Batch">
+                    <label>username :</label><input type="text" name="username" placeholder="username">
+                    <label>password :</label><input type="password" name="password" placeholder="password">
+                </div>
+
+             
+
+                <button type="submit">signup Here</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright © 2025 EduTrack. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
